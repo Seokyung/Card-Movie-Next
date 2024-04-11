@@ -1,5 +1,12 @@
+import Navigation from "../components/navigation";
+
 const NotFound = () => {
-	return <h1>Page Not Found</h1>;
+	return (
+		<div>
+			<Navigation />
+			<h1>Page Not Found!</h1>
+		</div>
+	);
 };
 
 export default NotFound;

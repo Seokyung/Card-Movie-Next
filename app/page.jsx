@@ -1,12 +1,9 @@
-import Navigation from "../components/navigation";
-
-const Page = () => {
+const Home = () => {
 	return (
 		<div>
-			<Navigation />
 			<h1>Home Page</h1>
 		</div>
 	);
 };
 
-export default Page;
+export default Home;

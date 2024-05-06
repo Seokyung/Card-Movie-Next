@@ -1,3 +1,7 @@
+export const metadata = {
+	title: "Not Found",
+};
+
 const NotFound = () => {
 	return (
 		<div>

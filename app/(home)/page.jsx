@@ -25,9 +25,9 @@ export default Home;
  */
 async function getMovies() {
 	// 백엔드에서 데이터를 fetch하기 때문에 loading 상태가 안보이는 것처럼 동작함
-	// await new Promise((resolve) => {
-	// 	setTimeout(resolve, 5000);
-	// });
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
 	const res = await fetch(URL);
 	const json = await res.json();
 	return json;

@@ -6,11 +6,12 @@ const MovieVideos = async ({ id }) => {
 };
 
 const getVideos = async (id) => {
-	// await new Promise((resolve) => {
-	// 	setTimeout(resolve, 3000);
-	// });
-	const response = await fetch(`${API_URL}/${id}/videos`);
-	return response.json();
+	await new Promise((resolve) => {
+		setTimeout(resolve, 3000);
+	});
+	throw Error("something broke...");
+	// const response = await fetch(`${API_URL}/${id}/videos`);
+	// return response.json();
 };
 
 export default MovieVideos;

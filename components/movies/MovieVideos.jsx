@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+import { API_URL } from "../../app/(home)/page";
 
 const MovieVideos = async ({ id }) => {
 	const videos = await getVideos(id);

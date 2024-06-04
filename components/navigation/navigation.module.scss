@@ -1,7 +1,11 @@
 .nav {
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
-	height: 60px;
+	width: 100%;
+	height: var(--nav-height);
 	background-color: #2f3542;
 }
 
@@ -14,5 +18,8 @@
 
 	li {
 		font-size: 1.25rem;
+		&:hover {
+			color: #70a1ff;
+		}
 	}
 }

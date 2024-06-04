@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "../styles/navigation.module.scss";
+import styles from "./navigation.module.scss";
 
 const Navigation = () => {
 	const path = usePathname();
@@ -11,11 +11,11 @@ const Navigation = () => {
 		<nav className={styles.nav}>
 			<ul className={styles.navList}>
 				<li>
-					<Link href={"/"}>Home {path === "/" && "👈"}</Link>
+					<Link href={"/"}>{path === "/" && "🎬"} Home</Link>
 				</li>
 				<li>
 					<Link href={"/about-me"}>
-						About Me {path === "/about-me" && "👈"}
+						{path === "/about-me" && "🎬"} About Me
 					</Link>
 				</li>
 			</ul>

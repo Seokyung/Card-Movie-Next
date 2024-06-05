@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import MovieInfo from "../../../../components/MovieInfo";
-import MovieVideos from "../../../../components/MovieVideos";
+import MovieInfo from "../../../../components/movies/MovieInfo";
+import MovieVideos from "../../../../components/movies/MovieVideos";
 
 const MovieDetails = async ({ params: { id } }) => {
 	return (

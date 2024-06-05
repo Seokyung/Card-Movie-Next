@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { resolve } from "styled-jsx/css";
+import Movie from "../../components/home/movie";
 
 // metadata는 server-side components에서만 사용 가능함
 export const metadata = {
@@ -12,16 +11,9 @@ const Home = async () => {
 	const movies = await getMovies();
 	return (
 		<div>
-			<h1>Home Page</h1>
-			<div>
-				{movies.map((movie) => {
-					return (
-						<li key={movie.id}>
-							<Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-						</li>
-					);
-				})}
-			</div>
+			{movies.map((movie) => {
+				return <Movie key={movie.id} movie={movie} />;
+			})}
 		</div>
 	);
 };

@@ -1,4 +1,5 @@
 import Movie from "../../components/home/movie";
+import styles from "./home.module.scss";
 
 // metadata는 server-side components에서만 사용 가능함
 export const metadata = {
@@ -10,7 +11,7 @@ export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 const Home = async () => {
 	const movies = await getMovies();
 	return (
-		<div>
+		<div className={styles.home}>
 			{movies.map((movie) => {
 				return <Movie key={movie.id} movie={movie} />;
 			})}

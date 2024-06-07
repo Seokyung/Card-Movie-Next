@@ -1,0 +1,33 @@
+.movie {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	&:hover {
+		.moviePoster img {
+			box-shadow: 0 0 15px 2px rgba(47, 53, 66, 0.7);
+		}
+
+		.movieTitle {
+			text-decoration: underline;
+		}
+	}
+}
+
+.moviePoster {
+	width: 100%;
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+}
+
+.movieTitle {
+	color: #f1f2f6;
+	text-align: center;
+	font-size: 1.125rem;
+	line-height: 1.125;
+	letter-spacing: -0.2px;
+}

@@ -1,4 +1,4 @@
-import Movie from "../../components/home/movie";
+import Movie from "../../components/home/Movie";
 import styles from "./home.module.scss";
 
 // metadata는 server-side components에서만 사용 가능함

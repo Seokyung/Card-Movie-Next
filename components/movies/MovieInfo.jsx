@@ -33,7 +33,7 @@ const MovieInfo = async ({ id }) => {
 	);
 };
 
-const getMovie = async (id) => {
+export const getMovie = async (id) => {
 	// await new Promise((resolve) => {
 	// 	setTimeout(resolve, 5000);
 	// });

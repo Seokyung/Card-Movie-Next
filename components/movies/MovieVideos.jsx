@@ -1,18 +1,23 @@
 import { API_URL } from "../../app/(home)/page";
+import styles from "./MovieVideos.module.scss";
 
 const MovieVideos = async ({ id }) => {
 	const videos = await getVideos(id);
 	return (
 		<div>
-			{videos.map((video) => (
-				<iframe
-					key={video.id}
-					title={video.name}
-					src={`https://youtube.com/embed/${video.key}`}
-					allowFullScreen
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				/>
-			))}
+			<h4>▶️ Related Videos</h4>
+			<div className={styles.movieVideos}>
+				{videos.map((video) => (
+					<iframe
+						key={video.id}
+						title={video.name}
+						src={`https://youtube.com/embed/${video.key}`}
+						className={styles.movieVideo}
+						allowFullScreen
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					/>
+				))}
+			</div>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./movie.module.scss";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Movie = ({ movie }) => {
 	const router = useRouter();
@@ -12,16 +13,19 @@ const Movie = ({ movie }) => {
 	};
 
 	return (
-		<div className={styles.movie} onClick={() => routeToMovie(movie.id)}>
+		<div className={styles.movie}>
 			<div className={styles.moviePoster}>
 				<Image
 					width={250}
 					height={400}
 					src={movie.poster_path}
 					alt={`${movie.title} Poster`}
+					onClick={() => routeToMovie(movie.id)}
 				/>
 			</div>
-			<p className={styles.movieTitle}>{movie.title}</p>
+			<Link prefetch href={`/movies/${movie.id}`} className={styles.movieTitle}>
+				{movie.title}
+			</Link>
 		</div>
 	);
 };

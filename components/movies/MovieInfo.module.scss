@@ -1,6 +1,5 @@
 .movieInfo {
 	display: flex;
-	justify-content: space-between;
 	gap: 2.25rem;
 	padding: 1rem 2rem;
 	@media all and (max-width: 768px) {
@@ -27,6 +26,7 @@
 	flex-direction: column;
 	gap: 0.25rem;
 	padding: 1rem 0;
+	width: 100%;
 	.movieTitle {
 		font-size: 1.75rem;
 		font-weight: 700;

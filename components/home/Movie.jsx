@@ -23,6 +23,7 @@ const Movie = ({ movie }) => {
 					onClick={() => routeToMovie(movie.id)}
 				/>
 			</div>
+			{/* prefetch로 링크 클릭 시 나타날 페이지에 필요한 파일 미리 요청함 (production 환경에서만 작동) */}
 			<Link prefetch href={`/movies/${movie.id}`} className={styles.movieTitle}>
 				{movie.title}
 			</Link>

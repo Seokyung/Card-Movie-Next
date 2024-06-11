@@ -1,4 +1,3 @@
-import { API_URL } from "../../app/(home)/page";
 import styles from "./MovieVideos.module.scss";
 
 const MovieVideos = async ({ id }) => {
@@ -27,7 +26,7 @@ const getVideos = async (id) => {
 	// 	setTimeout(resolve, 3000);
 	// });
 	// throw Error("something broke...");
-	const response = await fetch(`${API_URL}/${id}/videos`);
+	const response = await fetch(`${process.env.API_URL}/${id}/videos`);
 	return response.json();
 };
 
